@@ -3,7 +3,7 @@ import '../index.less';
 
 function main() {
     const canvas = document.querySelector('#canvas');
-    const renderer = new THREE.WebGLRenderer({canvas});
+    const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setPixelRatio(window.devicePixelRatio);
 
     const fov = 75;
@@ -15,7 +15,7 @@ function main() {
 
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshPhongMaterial({color: 0x44aa88});
+    const material = new THREE.MeshPhongMaterial({ color: 0x44aa88 });
     const cube = new THREE.Mesh(geometry, material);
 
     const scene = new THREE.Scene();
@@ -30,7 +30,7 @@ function main() {
     }
 
     function makeInstance(geometry, color, x) {
-        const material = new THREE.MeshPhongMaterial({color, opacity: 0.1, transparent: false});
+        const material = new THREE.MeshPhongMaterial({ color, opacity: 0.1, transparent: false });
 
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
@@ -41,9 +41,9 @@ function main() {
     }
 
     const cubes = [
-        makeInstance(geometry, 0x44aa88,  0),
+        makeInstance(geometry, 0x44aa88, 0),
         makeInstance(geometry, 0x8844aa, -2),
-        makeInstance(geometry, 0xaa8844,  2),
+        makeInstance(geometry, 0xaa8844, 2),
     ];
 
     renderer.render(scene, camera);

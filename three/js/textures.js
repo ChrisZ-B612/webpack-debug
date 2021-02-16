@@ -1,6 +1,7 @@
 import { GUI } from 'dat.gui';
 import * as THREE from 'three';
 import '../index.less';
+import DegRadHelper from './helpers/DegRadHelper';
 
 function main() {
     const canvas = document.querySelector('#canvas');
@@ -30,21 +31,6 @@ function main() {
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
     cubes.push(cube);  // add to our list of cubes to rotate
-
-    class DegRadHelper {
-        constructor(obj, prop) {
-            this.obj = obj;
-            this.prop = prop;
-        }
-
-        get value() {
-            return THREE.MathUtils.radToDeg(this.obj[this.prop]);
-        }
-
-        set value(v) {
-            this.obj[this.prop] = THREE.MathUtils.degToRad(v);
-        }
-    }
 
     class StringToNumberHelper {
         constructor(obj, prop) {

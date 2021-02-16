@@ -9,10 +9,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
+        // index: './src/index.js',
         // basics: './three/js/basics.js',
         // primitives: './three/js/primitives.js',
         // scenegraph: './three/js/scenegraph.js',
-        textures: './three/js/textures.js',
+        // textures: './three/js/textures.js',
+        lights: './three/js/lights-SpotLight.js',
         // vue: './src/vue.js',
         // login: './src/login.js',
     },
