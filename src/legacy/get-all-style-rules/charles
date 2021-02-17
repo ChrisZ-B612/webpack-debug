@@ -1,0 +1,2 @@
+Body -> Response
+(href="[^"]+\.css[^"]*")  ->  $1 crossorigin="anonymous"
